@@ -4,7 +4,7 @@ pingsite () {
     curl --output /dev/null --connect-timeout 5 --max-time 20 --write-out "%{http_code}" -s -S "$1"
 }
 
-tbl=$(printf "ACTUAL RESPONSE\tEXPECTED RESPONSE\tDEPLOYMENT\tURL")
+tbl=$(printf "ACTUAL\tEXPECTED\tDEPLOYMENT\tURL")
 
 while read -r line; do
     url=$(echo "$line" | cut -d ',' -f 1)
