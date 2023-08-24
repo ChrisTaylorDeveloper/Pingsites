@@ -12,5 +12,3 @@ while read -r line; do
 
     pingsite "$url" "$response_code" "$response_description" "$deployment"
 done
-
-
